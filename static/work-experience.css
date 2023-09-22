@@ -1,0 +1,20 @@
+.column {
+    float: left;
+    width: 33%;
+    margin: 0 auto; 
+    text-align: center; 
+    display: block;
+}
+
+.image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.columns:after {
+    content: "";
+    display: table;
+    clear: both;
+}

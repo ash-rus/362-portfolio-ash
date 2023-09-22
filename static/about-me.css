@@ -1,0 +1,23 @@
+.about-me {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px; 
+}
+
+.text {
+    flex: 1; 
+    padding-right: 20px; 
+}
+
+.image {
+    flex: 1; 
+    max-width: 100%; 
+    padding-bottom: 0px;
+}
+
+.respond {
+    text-align: center;
+    padding-top: 0px;
+    line-height: 0;
+    margin-top: -15px;
+}

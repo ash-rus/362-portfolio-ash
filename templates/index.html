@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura-pink.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% if result %}
+<title>Ashley Rus Portfolio 🤖</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+
+<main>
+    <head>
+        <h1><center>🤖 Ashley Rus 🤖</center></h1>
+        <br>   
+    </head>
+
+    <body style="padding-bottom: 0">
+        <div class="about-me">
+            <div class="text">
+                <h3>AI Ashley:</h3>
+                <br>
+                <div class="result">{{ result }}</div>
+            </div>
+            
+            <div class="image">
+                <img src="{{ url_for('static', filename='me.jpg') }}" alt="Me" style="border-radius: 30px">
+            <div class="respond">
+                <form action="/" method="post">
+                    <input type="text" name="prompt" placeholder="Enter text here" required />
+                    <input type="submit" value="Send Message" />
+                </form>
+            </div>
+            </div>
+            <link rel="stylesheet" href="{{ url_for('static', filename='about-me.css') }}" />
+        </div>
+        
+        <div class="testimonials">
+            <h2><center>Testimonials</center></h2>
+
+            <blockquote>
+                I still have no testimonials 😭
+            </blockquote>
+
+        </div>
+
+        <br>
+        <center>
+        <a href="https://gmail.com" class="fa fa-envelope"></a>
+        <a href="https://github.com/ash-rus" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+        </center>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.css') }}" type="text/css">
+
+        <div class="resume">
+            
+        </div>
+
+    </body>
+
+</main>
+{% else %}
+<title>Ashley Rus Portfolio ✨</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+<main>
+    <head>   
+        <h1><center>✨ Ashley Rus ✨</center></h1>
+        <br>   
+    </head>
+
+    <body>
+        <div class="about-me">
+            <div class="text">
+                <h3>A Little About Me</h3>
+                <br>
+                <p>
+                    Hi! I'm Ashley. I'm a third year Computer Science
+                    student at CSUF looking to make the world a smarter
+                    place via artificial intelligence.
+                </p>
+
+                <a href="https://gmail.com" class="fa fa-envelope"></a>
+                <a href="https://github.com/ash-rus" class="fa fa-github"></a>
+                <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+                <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.css') }}" type="text/css">
+            </div>
+            
+            <div class="image">
+                <img src="{{ url_for('static', filename='me.jpg') }}" alt="Me" style="border-radius: 30px">
+            </div>
+            <link rel="stylesheet" href="{{ url_for('static', filename='about-me.css') }}" />
+        </div>
+
+        <div class="work-experience">
+            <h2><center>Work Experience</center></h2>
+            <br>
+            
+            <div class="columns">
+                <div class="column">
+                    <h5>Telos Alliance Intern</h5>
+                    <p>
+                        <u>June - August 2021</u>
+                        <br>
+                        <br>
+                        I worked as an intern for Telos Alliance,
+                        a company that builds solutions for
+                        radio and broadcasting. I tested both
+                        hardware and software products in a
+                        Linux environment and documented the
+                        results of my testing. 
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='telos-logo.png') }}" alt="telos-logo">
+                        <img src="{{ url_for('static', filename='acm-logo.png') }}" alt="acm-logo">
+                    </div>
+                </div>
+                <div class="column">
+                    <h5>ACM AI Team Lead</h5>
+                    <p>
+                        <u>August 2023 - Present</u>
+                        <br>
+                        <br>
+                        I organize a team of six board members
+                        to deliver weekly workshops, guide
+                        students through AI learning, and assist
+                        in other administrative work for the
+                        <a class="acm-link" href="https://acmcsuf.com/">Association of Computing Machinery at Cal State Fullerton.</a>
+                    </p>
+                </div>
+            </div>
+            <link rel="stylesheet" href="{{ url_for('static', filename='work-experience.css') }}" type="text/css">
+        </div>
+
+        <br>
+
+        <div class="portfolio">
+            <h2><center>Portfolio</center></h2>
+            <br>
+            
+            <div class="project">
+                <div class="left-image">
+                    <img src="{{ url_for('static', filename='mc-plugin.png') }}" alt="MC Plugin" style="border-radius: 30px">
+                </div>
+                <div class="right-text">
+                    <h5>Magic Tomes</h5>
+                    <br>
+                    <p>
+                        Using the Paper plugin API for Minecraft
+                        1.20.1, I implemented multiple magic spells
+                        with additional systems to provide
+                        an immersive user experience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="left-text">
+                    <h5>ACM AI Workshops</h5>
+                    <br>
+                    <p>
+                        I organize workshops every Thursday at
+                        6:00 PM (come out). We provide knowledge
+                        on AI systems and machine learning fundamentals
+                        at a beginner level. 
+                    </p>
+                </div>
+                <div class="right-image">
+                    <img src="{{ url_for('static', filename='ai-meeting.png') }}" alt="AI Meeting" style="border-radius: 30px">
+                </div>
+            </div>
+            <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}" type="text/css">
+        </div>
+        
+        <div class="skills">
+            <h2><center>Skills</center></h2>
+            <div class="column">
+                <p>
+                    C++
+                    <br>
+                    <br>
+                    CSS
+                    <br>
+                    <br>
+                    AI Tools
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    Python
+                    <br>
+                    <br>
+                    Java
+                    <br>
+                    <br>
+                    Project management
+                </p>
+            </div>
+            <div class="column" style="margin-bottom: 4rem">
+                <p>
+                    HTML
+                    <br>
+                    <br>
+                    Typescript
+                    <br>
+                    <br>
+                    Communication
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <div class="testimonials">
+            <h2><center>Testimonials</center></h2>
+
+            <blockquote>
+                I have no testimonials, but if I did they would surely be here!
+            </blockquote>
+
+        </div>
+
+        <br>
+        
+        <div class="contact-form">
+            <h2><center>Contact Me!</center></h2>
+            <form action="/" method="post">
+                <textarea id="subject" name="prompt" placeholder="Enter text here" style="height:200px"></textarea>
+                <div class="center">
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='contact-form.css') }}" />
+        </div>
+
+        <footer style="display: flex; padding-bottom: 1rem; padding-top: 1rem;">
+            <div class="column">
+                <a href="https://docs.google.com/">Resume 📝</a>
+            </div>
+            <div class="column"><p> </p></div>
+            <div class="column">
+                <a href="https://en.wikipedia.org/wiki/Transgender_rights_in_the_United_States">🏳️‍⚧️ Trans rights</a>
+            </div>
+        </footer>
+
+    </body>
+
+</main>
+{% endif %}
